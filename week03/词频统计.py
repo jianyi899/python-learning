@@ -12,5 +12,7 @@ for w in words:
     counts[w] = counts.get(w, 0) + 1
 #    （提示：用 counts.get(w, 0) 这一行能省掉if判断）
 # 5. 打印每个词和它的次数
-for w in counts:
-    print(w, counts[w])
+for w, c in sorted(counts.items(), key=lambda x: x[1], reverse=True):
+    print(w, c)
+# for w in counts:
+#     print(w, counts[w])
